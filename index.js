@@ -24,7 +24,7 @@ const mediaData = [
     text: `Vem ver meu primo dotado gozando dentro da minha bucetinha apertadinha🥵💦
 
 Vídeo completo de 20 minutos no meu Grupo Vip, clique no botão abaixo⬇️`,
-    schedule: '06:46',
+    schedule: '01:09',
     dayOfWeek: 1 
   },
   {
