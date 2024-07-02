@@ -3,8 +3,9 @@ const fs = require('fs');
 const path = require('path');
 const moment = require('moment-timezone');
 
-const TOKEN = '7128149289:AAEP6PDESreq2ZuUYETKeyBGqnYhoGOL02U';
-
+// Carregar variáveis de ambiente
+const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const CHANNEL_ID = process.env.TELEGRAM_CHANNEL_ID;
 const TIMEZONE = 'America/Sao_Paulo';
 
 const bot = new TelegramBot(TOKEN, { polling: true });
@@ -24,8 +25,8 @@ const mediaData = [
     text: `Vem ver meu primo dotado gozando dentro da minha bucetinha apertadinha🥵💦
 
 Vídeo completo de 20 minutos no meu Grupo Vip, clique no botão abaixo⬇️`,
-    schedule: '01:16',
-    dayOfWeek: 1 
+    schedule: '06:46',
+    dayOfWeek: 1
   },
   {
     path: path.join(__dirname, 'videos', 'segunda_video2.mp4'),
@@ -33,19 +34,19 @@ Vídeo completo de 20 minutos no meu Grupo Vip, clique no botão abaixo⬇️`,
 
 De R$67,90 Por apenas R$11,90👇🏻🥵💦`,
     schedule: '11:57',
-    dayOfWeek: 1  
+    dayOfWeek: 1
   },
   {
     path: path.join(__dirname, 'videos', 'segunda_video3.mp4'),
     text: `Postei o vídeo completo de 10 minuto no meu grupo vip, vem conferir amor🤤💦👇🏻👇🏻`,
     schedule: '18:34',
-    dayOfWeek: 1  
+    dayOfWeek: 1
   },
   {
     path: path.join(__dirname, 'imagens', 'segunda_foto1.jpg'),
     text: `Gravei um vídeo com meu primo dotado gozando dentro da minha bucetinha💦🤤🔥`,
     schedule: '22:35',
-    dayOfWeek: 1  
+    dayOfWeek: 1
   },
   // Terça-feira
   {
@@ -54,38 +55,38 @@ De R$67,90 Por apenas R$11,90👇🏻🥵💦`,
 
 Clique no botão abaixo para ver o vídeo completo sem censura⬇️`,
     schedule: '06:46',
-    dayOfWeek: 2 
+    dayOfWeek: 2
   },
   {
     path: path.join(__dirname, 'videos', 'terca_video2.mp4'),
     text: `Chupei meu primo até ele gozar na minha boquinha🥵🤭 Postei o vídeo completo no vip👇🏻👇🏻🤍`,
     schedule: '11:57',
-    dayOfWeek: 2 
+    dayOfWeek: 2
   },
   // Quarta-feira
   {
     path: path.join(__dirname, 'videos', 'quarta_video1.mp4'),
     text: `Ele me comeu gostoso e ainda gozou na minha boquinha, vem ver o vídeo completo no vip👇🏻👇🏻🤤💦`,
     schedule: '06:46',
-    dayOfWeek: 3 
+    dayOfWeek: 3
   },
   {
     path: path.join(__dirname, 'videos', 'quarta_video2.mp4'),
     text: `namorado da minha amiga colocou os 23centimetros dele dentro de mim 🥺🤤, vem ver o vídeo completo sem censura de 12 minutos no meu vip👇🏻👇🏻🤍`,
     schedule: '11:57',
-    dayOfWeek: 3 
+    dayOfWeek: 3
   },
   {
     path: path.join(__dirname, 'videos', 'quarta_video3.mp4'),
     text: `namorado da minha amiga colocou os 23centimetros dele dentro de mim 🥺🤤, vem ver o vídeo completo sem censura de 12 minutos no meu vip👇🏻👇🏻🤍`,
     schedule: '18:34',
-    dayOfWeek: 3 
+    dayOfWeek: 3
   },
   {
     path: path.join(__dirname, 'imagens', 'quarta_foto1.jpg'),
     text: `Já pensou em me ver algemada, sendo bastante usada e tratada como uma boa putinha obediente, esse vídeo tem 7 minutos de puro tesão, postei completinho no meu VIP 🤤💦`,
     schedule: '22:35',
-    dayOfWeek: 3 
+    dayOfWeek: 3
   },
   // Quinta-feira
   {
@@ -94,7 +95,7 @@ Clique no botão abaixo para ver o vídeo completo sem censura⬇️`,
 
 Aproveita a promoção👇🏻`,
     schedule: '06:46',
-    dayOfWeek: 4 
+    dayOfWeek: 4
   },
   {
     path: path.join(__dirname, 'videos', 'quinta_video2.mp4'),
@@ -104,7 +105,7 @@ Vem ver esse vídeo e vários outros de 10 minutos no meu Grupo Vip, corra e apr
 
 Esse valor somente hoje, depois ele voltará para o valor original de 78,90‼️👇🏻`,
     schedule: '11:57',
-    dayOfWeek: 4 
+    dayOfWeek: 4
   },
   {
     path: path.join(__dirname, 'imagens', 'quinta_foto1.jpg'),
@@ -112,7 +113,7 @@ Esse valor somente hoje, depois ele voltará para o valor original de 78,90‼�
 
 Vem ver oque eu ando aprontando no VIP🙈🔥`,
     schedule: '18:34',
-    dayOfWeek: 4  
+    dayOfWeek: 4
   },
   // Sexta-feira
   {
@@ -121,7 +122,7 @@ Vem ver oque eu ando aprontando no VIP🙈🔥`,
 
 Mais de 400 midias, clique no botão abaixo👇🏻`,
     schedule: '06:46',
-    dayOfWeek: 5 
+    dayOfWeek: 5
   },
   {
     path: path.join(__dirname, 'imagens', 'sexta_foto2.jpg'),
@@ -129,7 +130,7 @@ Mais de 400 midias, clique no botão abaixo👇🏻`,
 
 Postei o vídeo completo de 15 minutos no Vip👇🏻❤️‍🔥`,
     schedule: '11:57',
-    dayOfWeek: 5  
+    dayOfWeek: 5
   },
   {
     path: path.join(__dirname, 'videos', 'sexta_video1.mp4'),
@@ -139,7 +140,7 @@ Comprando meu Vip você terá acesso ao meu WhatsApp, vou virar sua putinha😇
 
 Corra e aproveite a promoção de 78,90 por R$ 12,90👇🏻👇🏻`,
     schedule: '18:34',
-    dayOfWeek: 5  
+    dayOfWeek: 5
   }
 ];
 
@@ -187,7 +188,7 @@ const main = () => {
     const mediaParaEnviar = verificarHorario();
     if (mediaParaEnviar) {
       console.log(`É ${mediaParaEnviar.schedule}, enviando mídia...`);
-      enviarMidia('-1002239256038', mediaParaEnviar.path, mediaParaEnviar.text);
+      enviarMidia(CHANNEL_ID, mediaParaEnviar.path, mediaParaEnviar.text);
     } else {
       console.log('Ainda não é o horário de enviar mídia. Aguardando...');
     }
